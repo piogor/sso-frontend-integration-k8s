@@ -1,23 +1,23 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: sso-frontend
+  name: sso-frontend-piotr-goryl
 spec:
   replicas: 1
   revisionHistoryLimit: 0
   selector:
     matchLabels:
       component: sso
-      student: dave-lee
+      student: piotr-goryl
   template:
     metadata:
       labels:
         component: sso
-        student: dave-lee
+        student: piotr-goryl
     spec:
       containers:
         - name: static
-          image: ensaas/sso-frontend:v0.9.9
+          image: piogor/sso-frontend-piotr-goryl:exam
           ports:
             - containerPort: 3000
           resources:

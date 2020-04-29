@@ -1,12 +1,12 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: sso-frontend
+  name: sso-frontend-piotr-goryl
 spec:
   type: ClusterIP
   selector:
     component: sso
-    student: dave-lee
+    student: piotr-goryl
   ports:
     - port: 3000
       targetPort: 3000
